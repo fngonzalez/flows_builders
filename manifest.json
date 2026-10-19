@@ -1,6 +1,11 @@
 {
   "manifestVersion": 1,
   "permissions": {
-    "network": []
+    "network": [
+      {
+        "sources": ["https://storage.googleapis.com", "https://*.blob.core.windows.net", "https://*.amazonaws.com", "https://*.cognitedata.com"],
+        "directives": ["img-src", "frame-src"]
+      }
+    ]
   }
 }
