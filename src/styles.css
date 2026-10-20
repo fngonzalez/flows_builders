@@ -8,3 +8,8 @@
     'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
 }
+
+/* Aura's default light muted text is too faint for normal-size helper text. */
+:root:not(.dark) {
+  --muted-foreground: var(--secondary-foreground);
+}

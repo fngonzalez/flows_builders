@@ -1,0 +1,115 @@
+﻿{
+  "scope": "Static resolved Aura/CSS token pairs, not a full rendered accessibility audit",
+  "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+  "results": [
+    {
+      "theme": "light",
+      "foreground": "--muted-foreground",
+      "background": "--background",
+      "foregroundRgb": [
+        124,
+        134,
+        142
+      ],
+      "backgroundRgb": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 3.711785250548619,
+      "minimum": 4.5,
+      "pass": false
+    },
+    {
+      "theme": "light",
+      "foreground": "--muted-foreground",
+      "background": "--card-background",
+      "foregroundRgb": [
+        124,
+        134,
+        142
+      ],
+      "backgroundRgb": [
+        249,
+        250,
+        250
+      ],
+      "ratio": 3.549636046414591,
+      "minimum": 4.5,
+      "pass": false
+    },
+    {
+      "theme": "light",
+      "foreground": "--muted-foreground",
+      "background": "--muted-background",
+      "foregroundRgb": [
+        124,
+        134,
+        142
+      ],
+      "backgroundRgb": [
+        241,
+        242,
+        243
+      ],
+      "ratio": 3.311481523095966,
+      "minimum": 4.5,
+      "pass": false
+    },
+    {
+      "theme": "dark",
+      "foreground": "--muted-foreground",
+      "background": "--background",
+      "foregroundRgb": [
+        165,
+        171,
+        177
+      ],
+      "backgroundRgb": [
+        25,
+        27,
+        29
+      ],
+      "ratio": 7.451494261643733,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--muted-foreground",
+      "background": "--card-background",
+      "foregroundRgb": [
+        165,
+        171,
+        177
+      ],
+      "backgroundRgb": [
+        33,
+        36,
+        38
+      ],
+      "ratio": 6.735955491666676,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--muted-foreground",
+      "background": "--muted-background",
+      "foregroundRgb": [
+        165,
+        171,
+        177
+      ],
+      "backgroundRgb": [
+        45,
+        49,
+        52
+      ],
+      "ratio": 5.660703021093213,
+      "minimum": 4.5,
+      "pass": true
+    }
+  ]
+}
+
