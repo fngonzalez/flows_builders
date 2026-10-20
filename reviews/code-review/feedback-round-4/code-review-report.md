@@ -2,6 +2,8 @@
 
 Date: 2026-10-20, round 4. This is a local technical review using the Cognite Flows certification criteria. It is not an engineering-lane approval or a certification submission.
 
+Historical snapshot: the subsequent CSS contrast correction is covered by [round 5](../feedback-round-5/code-review-report.md).
+
 ## Path to approval
 
 This review found **0 must-fix items** in the current source snapshot. Two Should Fix and four Nice Fix findings remain. Live acceptance and the design review are still incomplete.

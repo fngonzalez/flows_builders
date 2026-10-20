@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-20",
+  "criteria": [
+    {
+      "name": "flows-review-checks",
+      "source": "cognitedata/builder-skills; freshly pulled with Cognite CLI for round 5",
+      "sha256": "088f48b6a747564b4cd7cbdfc8777c6c87bf5f9e698ac9cce5a8fc2b1d1ec9d1"
+    },
+    {
+      "name": "code-quality",
+      "source": "cognitedata/builder-skills; freshly pulled with Cognite CLI for round 5",
+      "sha256": "9d83457f850bcb2fe8e21e28a57ee57e616930aa56c706551ecaa250c768d322"
+    }
+  ]
+}

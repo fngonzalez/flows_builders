@@ -61,11 +61,11 @@ Las pruebas locales usan datos de prueba. La evidencia de la interfaz real proce
 
 ## 7. Revisar código y diseño
 
-**Revisión técnica actualizada; diseño en curso.** La [ronda técnica 4](code-review/feedback-round-4/code-review-report.md) registra cero Must Fix, dos Should Fix y cuatro Nice Fix para la instantánea actual. Es una revisión local, no una aprobación de Cognite.
+**Revisión técnica actualizada; diseño completado con hallazgos.** La [ronda técnica 5](code-review/feedback-round-5/code-review-report.md) registra cero Must Fix, dos Should Fix y cuatro Nice Fix para la instantánea actual. Es una revisión local, no una aprobación de Cognite.
 
 Esta auditoría encontró después un defecto en la clasificación del visor: `application/pdf; charset=binary` podía entrar al renderizador de imágenes. Se agregó primero una prueba de regresión que falló; luego se corrigió la normalización de MIME en `InvestigationView.tsx` y se actualizó FR-010a en `SPEC.md`.
 
-Tras corregir la tabla se descargaron otra vez los criterios oficiales, se revisaron los módulos y se actualizaron el inventario, las búsquedas, los paquetes y el informe técnico. Las rondas anteriores se conservan como historial. El [informe de diseño](design-review/feedback-round-1/design-review-report.md) registra el recorrido y las respuestas; su estado y notas confirmadas se conservan en [review-state.json](design-review/feedback-round-1/review-state.json). Falta identificar el commit de entrega.
+Tras corregir la tabla se descargaron otra vez los criterios oficiales, se revisaron los módulos y se actualizaron el inventario, las búsquedas, los paquetes y el informe técnico. Las rondas anteriores se conservan como historial. El [informe de diseño](design-review/feedback-round-1/design-review-report.md) registra el recorrido y las respuestas; su estado y notas confirmadas se conservan en [review-state.json](design-review/feedback-round-1/review-state.json). Las diez notas están confirmadas: promedio 3,7/5, por debajo de 3,8, con documentos en 2/5 y accesibilidad en 3/5. Falta resolver esos hallazgos y repetir diseño, además de identificar el commit de entrega.
 
 ## Comprobaciones actuales
 
@@ -80,7 +80,7 @@ Después de las correcciones del visor y las tablas:
 
 Los avisos del entorno de pruebas sobre iframes sin carga de red y dimensiones de Recharts no son comprobaciones de un navegador real. El build mantiene avisos de tamaño de chunk y anotaciones de Zod; finaliza correctamente.
 
-La instantánea actual de producción `src/**/*.ts(x)`, excluyendo pruebas y `__mocks__`, tiene SHA-256 `9b59bf7ac114c43bbfde50cfd1ee3cdd09be8aff09e7b2091748bd0624747e83`. Parte de HEAD `63fb85b6b3abc4af839062731e51ab5d4484e172` y contiene la corrección local de tablas y pruebas aún sin commit. El hash identifica el resultado revisado; HEAD por sí solo no incluye ese arreglo.
+La instantánea actual de producción `src/**/*.ts(x)`, excluyendo pruebas y `__mocks__`, tiene SHA-256 `9b59bf7ac114c43bbfde50cfd1ee3cdd09be8aff09e7b2091748bd0624747e83`. Coincide con HEAD `b46e8dfc37ea1793e1f6913b87e9abd532422aef` que incluye las correcciones de tablas, pruebas y contraste. Los artefactos de revisión contienen cambios documentales adicionales sin commit.
 
 ## Pruebas manuales pendientes, paso a paso
 
@@ -98,3 +98,7 @@ Ninguna de estas cuatro casillas se marcó como realizada. Esta sesión no tiene
 ## Entrega y certificación
 
 Todavía faltan repositorio remoto, despliegue, demo y presentación formal. El éxito de las pruebas locales no completa esos pasos ni acredita una certificación.
+
+## Actualización de contraste y video
+
+CSS revisado: src/styles.css, SHA-256 7e57d0554301c92d9b772ba0b5b96bcbb7ae2bd04c6face106ed5236c8752a99. El texto secundario claro usa un token Aura más fuerte; la regresión de seis pares CSS pasa en ambos temas. Sigue pendiente la validación visual completa. El usuario informó haber grabado el video; no se recibió ni inspeccionó el archivo/URL.

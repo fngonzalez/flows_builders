@@ -11,12 +11,12 @@ Actualizado: 2026-10-20. Este archivo no es una aprobación de Cognite.
 | 3. Especificación | SPEC.md contiene escenarios, requisitos, vistas CDM y relaciones verificadas con documentación oficial. | Sin pendiente documental identificado. |
 | 4. Plan | PLAN.md cubre contratos, datos, estado, UI, pruebas y aceptación real. | El archivo permite revisar el plan; no prueba por sí solo qué modo del agente se usó al crearlo. |
 | 5. Implementar y conectar datos | Búsqueda, activos, gráficos y actividades confirmados; último ejemplo: 43 series y 368 actividades. | Documento real, detalle de actividad, enlace compartido e historial en Fusion. |
-| 6. Pulir con Aura | Componentes, controles y estados implementados; superposición de actividades corregida y confirmada en la notebook. | Foco, contraste, otros tamaños y cierre de la evaluación de diseño; el usuario confirma que el teclado funciona. |
-| 7. Revisar código y diseño | Revisión técnica local actualizada en feedback-round-4: cero Must Fix, dos Should Fix y cuatro Nice Fix. Diseño round 1 con probes, recorrido registrado y siete notas confirmadas y tres pendientes. | Confirmar o corregir las tres notas restantes para finalizar el informe de diseño; incluir la corrección de la prueba en la revisión final de entrega. |
+| 6. Pulir con Aura | Componentes, controles y estados implementados; tabla corregida y confirmada en la notebook; contraste de texto secundario reforzado. | Validar foco, contraste corregido y otros tamaños en pantalla; el usuario confirma que el teclado funciona. |
+| 7. Revisar código y diseño | Revisión técnica local actualizada en feedback-round-5: cero Must Fix, dos Should Fix y cuatro Nice Fix. Diseño round 1 completado: 10 notas confirmadas, promedio 3,7/5; no alcanza 3,8. | Resolver documentos y validación visual de accesibilidad; ejecutar una nueva ronda de diseño antes de presentar. |
 
 La [revisión detallada](reviews/step-by-step-review.md) registra evidencias y límites. Las casillas de implementación no sustituyen las pruebas manuales pendientes.
 
-La ejecución actual está en el [informe técnico round 4](reviews/code-review/feedback-round-4/code-review-report.md) y en el [informe de diseño round 1, en curso](reviews/design-review/feedback-round-1/design-review-report.md). La suite pasó 31 pruebas, con 85,71% de cobertura de líneas; lint y compilación pasan. La corrección de tablas y sus pruebas están incluidas en esta revisión.
+La ejecución actual está en el [informe técnico round 5](reviews/code-review/feedback-round-5/code-review-report.md) y en el [informe de diseño round 1, completado con 3,7/5](reviews/design-review/feedback-round-1/design-review-report.md). La suite pasó 31 pruebas, con 85,71% de cobertura de líneas; lint y compilación pasan. La corrección de tablas y sus pruebas están incluidas en esta revisión.
 
 ## Completado
 
@@ -34,16 +34,20 @@ La ejecución actual está en el [informe técnico round 4](reviews/code-review/
 - [x] Corrección de columnas superpuestas en la notebook, reproducida en navegador y confirmada por el usuario.
 - [x] El usuario informa que la navegación con teclado funciona; foco y contraste detallados siguen pendientes.
 
+- [x] Diez notas de diseño confirmadas y reporte final generado: 3,7/5, por debajo del objetivo.
+- [x] Video grabado según el usuario; archivo/URL y contenido aún sin inspeccionar.
+- [x] Contraste de texto secundario claro reforzado con tokens Aura; seis pares CSS pasan la regresión.
+
 ## Pendiente antes de presentar
 
 - [ ] Validar un documento real relacionado con un activo: los registros de archivos son accesibles, pero no se encontró un ejemplo vinculado dentro de la muestra consultada.
 - [ ] Abrir el detalle de una actividad real y regresar al equipo.
 - [ ] Abrir un enlace compartido en otra pestaña y comprobar que conserva el equipo, el sensor seleccionado y el rango de tiempo.
 - [ ] Comprobar que el historial permite reabrir un equipo y se conserva después de recargar el inicio.
-- [ ] Completar la evaluación de diseño con el usuario, incluyendo las 10 preguntas oficiales. Q1, Q2, Q3, Q5, Q6, Q7 y Q9: 4/5 confirmados; Q4, Q8 y Q10 pendientes y sin promedio final.
+- [ ] Resolver los hallazgos de diseño y repetir la evaluación: la ronda 1 finalizó con 3,7/5, Q8=2 y Q10=3.
 - [ ] Publicar el repositorio en el destino elegido por el usuario y registrar su URL.
 - [ ] Desplegar en Cognite con permisos apropiados y registrar la URL de despliegue.
-- [ ] Grabar una demo corta con datos reales.
+- [ ] Registrar el archivo o URL del video y comprobar el contenido exigido por la guía. El usuario ya informó que lo grabó.
 - [ ] Presentar la solicitud por el proceso interno correspondiente y atender la revisión.
 
 ## Cómo validar estos puntos
