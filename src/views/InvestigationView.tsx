@@ -169,6 +169,9 @@ export function InvestigationView() {
       cell: ({ row }: { row: { original: Activity } }) => (
         <Button
           variant="ghost"
+          size="sm"
+          className="w-full min-w-0 justify-start"
+          title={row.original.name}
           onClick={() => {
             void vm.update({
               activity: {
@@ -178,15 +181,16 @@ export function InvestigationView() {
             });
           }}
         >
-          {row.original.name}
+          <span className="min-w-0 truncate">{row.original.name}</span>
         </Button>
       ),
     },
-    { accessorKey: 'externalId', header: 'Identifier' },
-    { accessorKey: 'status', header: 'Status' },
+    { accessorKey: 'externalId', header: 'Identifier', size: 140 },
+    { accessorKey: 'status', header: 'Status', size: 120 },
     {
       accessorKey: 'date',
       header: 'Recent date',
+      size: 200,
       cell: ({ row }: { row: { original: Activity } }) =>
         formatDate(row.original.date),
     },
@@ -198,6 +202,9 @@ export function InvestigationView() {
       cell: ({ row }: { row: { original: AssetFile } }) => (
         <Button
           variant="ghost"
+          size="sm"
+          className="w-full min-w-0 justify-start"
+          title={row.original.name}
           onClick={() => {
             void vm.update({
               file: {
@@ -207,21 +214,26 @@ export function InvestigationView() {
             });
           }}
         >
-          {row.original.name}
+          <span className="min-w-0 truncate">{row.original.name}</span>
         </Button>
       ),
     },
     {
       accessorKey: 'mimeType',
       header: 'Type',
+      size: 170,
       cell: ({ row }: { row: { original: AssetFile } }) =>
         row.original.mimeType || 'Unknown type',
     },
     {
       accessorKey: 'modified',
       header: 'Updated',
+      size: 200,
       cell: ({ row }: { row: { original: AssetFile } }) => (
-        <span title={row.original.modifiedLabel}>
+        <span
+          className="min-w-0 truncate"
+          title={`${row.original.modifiedLabel}: ${formatDate(row.original.modified)}`}
+        >
           {formatDate(row.original.modified)}
         </span>
       ),
@@ -686,7 +698,7 @@ export function InvestigationView() {
                       </ErrorBoundary>
                     </CardContent>
                   </Card>
-                  <div className="grid min-w-0 gap-6 xl:grid-cols-2">
+                  <div className="grid min-w-0 gap-6">
                     <Card className="min-w-0">
                       <CardHeader>
                         <CardTitle as="h2" className="flex items-center gap-2">
@@ -711,6 +723,7 @@ export function InvestigationView() {
                             {activities.data?.length ? (
                               <DataGrid
                                 aria-label="Related activities"
+                                className="h-96"
                                 data={activities.data}
                                 columns={activityColumns}
                                 getRowId={assetKey}
@@ -747,6 +760,7 @@ export function InvestigationView() {
                             {files.data?.length ? (
                               <DataGrid
                                 aria-label="Related documents"
+                                className="h-96"
                                 data={files.data}
                                 columns={fileColumns}
                                 getRowId={assetKey}

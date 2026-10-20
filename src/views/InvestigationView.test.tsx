@@ -1,11 +1,14 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 
 import { activity, asset, file, series } from '../__mocks__/fixtures';
 import type { AssetService } from '../services/AssetService';
 import { WorkspaceProvider } from '../state/WorkspaceProvider';
+
+// Preload the real lazy chart so module transforms do not consume interaction timeouts.
+import '../components/SeriesChart';
 
 import { InvestigationView } from './InvestigationView';
 
@@ -102,11 +105,16 @@ describe('asset investigation', () => {
     );
     await waitFor(() => expect(service.loadChart).toHaveBeenCalledTimes(1));
     expect(
-      await screen.findByText(/No samples in this time window/),
+      // The real chart loads lazily; its first transform can exceed 1s on a busy runner.
+      await screen.findByText(
+        /No samples in this time window/,
+        {},
+        { timeout: 5000 },
+      ),
     ).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Refresh chart' }));
     await waitFor(() => expect(service.loadChart).toHaveBeenCalledTimes(2));
-  });
+  }, 10000);
   it('offers a retry for a failed panel and resolves file preview on demand', async () => {
     const listFiles = vi
       .fn()
@@ -119,7 +127,9 @@ describe('asset investigation', () => {
     fireEvent.click(
       await screen.findByRole('button', { name: 'Pump manual.pdf' }),
     );
-    expect(await screen.findByTitle('Pump manual.pdf')).toBeInTheDocument();
+    expect(
+      await within(await screen.findByRole('dialog')).findByTitle('Pump manual.pdf'),
+    ).toBeInTheDocument();
     expect(service.fileUrl).toHaveBeenCalledWith(
       expect.objectContaining({ externalId: 'manual' }),
     );
@@ -133,7 +143,7 @@ describe('asset investigation', () => {
     await userEvent.click(
       await screen.findByRole('button', { name: file.name }),
     );
-    expect(await screen.findByTitle(file.name)).toHaveAttribute(
+    expect(await within(await screen.findByRole('dialog')).findByTitle(file.name)).toHaveAttribute(
       'src',
       'https://files.test/manual.pdf',
     );

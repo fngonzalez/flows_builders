@@ -48,6 +48,7 @@
 - FR-013: Authenticate with CogniteSdkProvider and the Flows host. No tokens/secrets in code or localStorage.
 - FR-014: All production domain data comes live from the authenticated CDF project. Fixtures are test-only, with no demo fallback.
 - FR-015: Fit desktop/laptop screens at 1280px and above without page horizontal scrolling; wrap responsively below that.
+- FR-015a: Related activity and document tables must keep long action labels inside their cells, preserve the full accessible label and detail action, and give identifiers/status/dates appropriate column widths. Stack these panels at supported desktop widths and constrain large lists to an independently scrollable table so hundreds of rows do not expand the entire page.
 - FR-016: Root and panel error boundaries with recovery controls.
 
 ## Success Criteria

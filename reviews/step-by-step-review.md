@@ -1,6 +1,6 @@
 # Revisión por pasos — Asset 360
 
-Fecha: 2026-10-19.
+Actualizado: 2026-10-20.
 
 Alcance: contrastar los siete pasos de la guía con los archivos, las comprobaciones locales y las confirmaciones del usuario. Esta auditoría de estado no reemplaza las revisiones formales de código y diseño ni otorga la certificación.
 
@@ -47,25 +47,29 @@ El usuario confirmó para `valhall-assets` / `WMT:23-PC-9109-M01`:
 
 La comprobación de documentos confirmó registros accesibles y ningún candidato relacionado dentro de la muestra consultada. No demuestra que no haya relaciones en todo el proyecto.
 
+El usuario confirmó después `WMT:23-KA-9101-M01`, también en `valhall-assets`: 43 series, 368 actividades, dos gráficos con muestras y cero documentos. Informó que no observaba demoras.
+
 Faltan las cuatro comprobaciones manuales descritas más abajo.
 
 ## 6. Pulir la interfaz con Aura
 
-**Implementado; revisión visual pendiente.** Hay componentes Aura para búsqueda, controles, tablas, mensajes y ventanas. Los paneles tienen estados independientes de carga, vacío, error, reintento y falta de acceso.
+**Implementado; defecto de notebook corregido y confirmado.** Hay componentes Aura para búsqueda, controles, tablas, mensajes y ventanas. Los paneles tienen estados independientes de carga, vacío, error, reintento y falta de acceso.
 
-Las pruebas locales comprueban comportamiento con datos de prueba. Falta observar la interfaz real, recorrerla con teclado y revisar foco, legibilidad, tamaño de pantalla y claridad de los mensajes. No se asignó una puntuación de diseño sin esa evaluación.
+Los nombres largos de actividades se superponían con las otras columnas. Una regresión de geometría en Edge reprodujo el problema antes del arreglo y pasó después a tres anchos. Las tablas conservan los nombres accesibles y permiten desplazamiento interno. El usuario recargó Fusion en la notebook y confirmó: «Sí, ahora se lee bien».
+
+Las pruebas locales usan datos de prueba. La evidencia de la interfaz real procede de los comentarios del usuario, que ahora confirma que la navegación con teclado funciona. Sigue pendiente la comprobación detallada de foco y contraste; otros tamaños no se han comprobado en Fusion.
 
 ## 7. Revisar código y diseño
 
-**Revisión técnica actualizada; diseño pendiente.** La [segunda ronda técnica](code-review/feedback-round-2/code-review-report.md) registra cero Must Fix, dos Should Fix y cuatro Nice Fix para la instantánea actual. Es una revisión local, no una aprobación de Cognite.
+**Revisión técnica actualizada; diseño en curso.** La [ronda técnica 4](code-review/feedback-round-4/code-review-report.md) registra cero Must Fix, dos Should Fix y cuatro Nice Fix para la instantánea actual. Es una revisión local, no una aprobación de Cognite.
 
 Esta auditoría encontró después un defecto en la clasificación del visor: `application/pdf; charset=binary` podía entrar al renderizador de imágenes. Se agregó primero una prueba de regresión que falló; luego se corrigió la normalización de MIME en `InvestigationView.tsx` y se actualizó FR-010a en `SPEC.md`.
 
-Se descargaron otra vez los criterios oficiales, se recorrieron todos los módulos de producción y se actualizaron el inventario, las búsquedas, el análisis de paquetes y el informe técnico. La primera ronda se conserva como historial. Falta completar la revisión de diseño con sus diez preguntas e identificar el commit de entrega. No existe un informe final de diseño ni una puntuación confirmada.
+Tras corregir la tabla se descargaron otra vez los criterios oficiales, se revisaron los módulos y se actualizaron el inventario, las búsquedas, los paquetes y el informe técnico. Las rondas anteriores se conservan como historial. El [informe de diseño](design-review/feedback-round-1/design-review-report.md) registra el recorrido y las respuestas; su estado y notas confirmadas se conservan en [review-state.json](design-review/feedback-round-1/review-state.json). Falta identificar el commit de entrega.
 
 ## Comprobaciones actuales
 
-Después de la corrección del visor:
+Después de las correcciones del visor y las tablas:
 
 | Comprobación | Resultado |
 | --- | --- |
@@ -76,7 +80,7 @@ Después de la corrección del visor:
 
 Los avisos del entorno de pruebas sobre iframes sin carga de red y dimensiones de Recharts no son comprobaciones de un navegador real. El build mantiene avisos de tamaño de chunk y anotaciones de Zod; finaliza correctamente.
 
-La instantánea actual de los archivos de producción `src/**/*.ts(x)`, excluyendo pruebas y `__mocks__`, tiene SHA-256 `b749062abdbaad3aa9a3081657ea6c228930bb8888cdd3713b3fe21683bb761c`. La implementación sigue sin commit y sin remoto configurado; el hash identifica esta auditoría, no un commit de entrega.
+La instantánea actual de producción `src/**/*.ts(x)`, excluyendo pruebas y `__mocks__`, tiene SHA-256 `9b59bf7ac114c43bbfde50cfd1ee3cdd09be8aff09e7b2091748bd0624747e83`. Parte de HEAD `63fb85b6b3abc4af839062731e51ab5d4484e172` y contiene la corrección local de tablas y pruebas aún sin commit. El hash identifica el resultado revisado; HEAD por sí solo no incluye ese arreglo.
 
 ## Pruebas manuales pendientes, paso a paso
 

@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-20",
+  "status": "awaiting_score_confirmations",
+  "sourceCommit": "63fb85b6b3abc4af839062731e51ab5d4484e172",
+  "productionSourceSha256": "9b59bf7ac114c43bbfde50cfd1ee3cdd09be8aff09e7b2091748bd0624747e83",
+  "codeReview": "../../code-review/feedback-round-4/code-review-report.md",
+  "codeReviewMustFixOpen": 0,
+  "userContext": {
+    "primaryUser": "Operations Analyst or Reliability Engineer",
+    "device": "Desktop or laptop",
+    "confirmedPreviously": true,
+    "source": "App-Brief.md and user confirmation on 2026-10-19"
+  },
+  "taskWalkthroughs": [
+    {
+      "id": "asset_search",
+      "task": "Search and open an asset with identity and context",
+      "priorUserEvidence": "Opened valhall-assets / WMT:23-PC-9109-M01, with 2 sensors and 16 activities",
+      "confirmedForThisReview": true,
+      "latestUserEvidence": "User opened WMT:23-KA-9101-M01 in valhall-assets: 43 time series, 368 activities, zero linked documents."
+    },
+    {
+      "id": "signal_history",
+      "task": "Select a signal and investigate its chart and time range",
+      "priorUserEvidence": "User confirmed a populated chart after selecting a sensor; full range walkthrough not yet recorded",
+      "confirmedForThisReview": true,
+      "latestUserEvidence": "Two actual numeric charts with 102 and 121 average samples, latest timestamps on March 14, 2026. User reports no delays."
+    },
+    {
+      "id": "related_document",
+      "task": "Find and open a related document",
+      "priorUserEvidence": "Attempted document discovery; accessible file records but no connected candidate in bounded sample; actual opening remains unverified",
+      "confirmedForThisReview": true,
+      "confirmationBasis": "Prior explicit failed discovery attempts carried forward; latest answer does not add a document opening."
+    }
+  ],
+  "walkthroughConfirmed": true,
+  "questions": [
+    {
+      "id": "Q1",
+      "draftScore": 4,
+      "score": 4,
+      "userConfirmed": true,
+      "userAnswer": "Aceptar 4/5",
+      "confirmationBasis": "Explicit acceptance in the simplified per-question form after the notebook table correction."
+    },
+    {
+      "id": "Q2",
+      "draftScore": 4,
+      "score": 4,
+      "userConfirmed": true,
+      "userAnswer": "Aceptar 4/5",
+      "confirmationBasis": "Explicit acceptance in the simplified per-question form after the notebook table correction."
+    },
+    {
+      "id": "Q3",
+      "draftScore": 4,
+      "score": 4,
+      "userConfirmed": true,
+      "userAnswer": "Aceptar 4/5",
+      "confirmationBasis": "Explicit acceptance in the simplified per-question form after the notebook table correction."
+    },
+    {
+      "id": "Q4",
+      "draftScore": 4,
+      "score": null,
+      "userConfirmed": false,
+      "userAnswer": "no vi ninguno de esos mensajes de que falla o no tiene datos, pero sí muestra fechas",
+      "confirmationBasis": "Dates confirmed; error and empty-state messages not observed in this latest report. Numeric score still pending."
+    },
+    {
+      "id": "Q5",
+      "draftScore": 4,
+      "score": 4,
+      "userConfirmed": true,
+      "userAnswer": "si, eso esta bien",
+      "confirmationBasis": "Explicit affirmative response to the proposed 4/5 score in the original per-question form."
+    },
+    {
+      "id": "Q6",
+      "draftScore": 4,
+      "score": 4,
+      "userConfirmed": true,
+      "userAnswer": "si, tal cual",
+      "confirmationBasis": "Explicit affirmative response to the proposed 4/5 score in the original per-question form."
+    },
+    {
+      "id": "Q7",
+      "draftScore": 4,
+      "score": 4,
+      "userConfirmed": true,
+      "userAnswer": "Aceptar 4/5",
+      "confirmationBasis": "Explicit acceptance in the latest simplified per-question form."
+    },
+    {
+      "id": "Q8",
+      "draftScore": 3,
+      "score": null,
+      "userConfirmed": false,
+      "previousDraftScore": 4,
+      "revisionReason": "User repeatedly could not complete the related-document task; the guidance did not resolve the missing example.",
+      "userAnswer": "Cambiar la nota y explicar qué ayuda falta",
+      "confirmationBasis": "Requested override without a numeric score or explanatory note; clarification requested."
+    },
+    {
+      "id": "Q9",
+      "draftScore": 4,
+      "score": 4,
+      "userConfirmed": true,
+      "userAnswer": "Aceptar 4/5",
+      "confirmationBasis": "Explicit acceptance in the latest simplified per-question form."
+    },
+    {
+      "id": "Q10",
+      "draftScore": 4,
+      "score": null,
+      "userConfirmed": false,
+      "previousDraftScore": 3,
+      "userAnswer": "Anda bien la navegación con teclado",
+      "revisionReason": "User confirms keyboard navigation works; revise draft to 4/5, pending numeric acceptance. Contrast and detailed focus review remain unverified."
+    }
+  ],
+  "averageScore": null,
+  "qualityLevel": null,
+  "submissionGate": "not_evaluated",
+  "walkthroughConfirmationBasis": "Cumulative explicit user reports: asset and chart, repeated document-discovery attempts ending at a data-example blocker, followed by renewed chart/range and 16-activity evidence on 2026-10-20. No real document opening is claimed.",
+  "layoutFix": {
+    "reportedIssue": "Activity values overlap on the notebook",
+    "localRegression": "../../code-review/feedback-round-4/layout-regression.json",
+    "userConfirmation": "Sí, ahora se lee bien",
+    "date": "2026-10-20",
+    "resolved": true
+  },
+  "feedback": [
+    {
+      "question": "Q1",
+      "answer": "no sé que es aura",
+      "interpretation": "Not score acceptance; superseded by explicit acceptance of simplified Q1."
+    },
+    {
+      "question": "Q2",
+      "answer": "no sé que me preguntas",
+      "interpretation": "Not score acceptance; superseded by explicit acceptance of simplified Q2."
+    },
+    {
+      "question": "Q3",
+      "answer": "los controles sí tienen nombre, pero ni idea que me preguntas",
+      "interpretation": "Label observation only; later explicit simplified Q3 acceptance."
+    },
+    {
+      "question": "Q4",
+      "answerSummary": "Pasted actual asset WMT:23-KA-9101-M01, 43 series, 368 activities, two populated charts, zero documents.",
+      "interpretation": "Walkthrough evidence, not a numeric score."
+    },
+    {
+      "question": "Q7",
+      "answer": "si se cambia en la notebook y hay cosas que veo mal",
+      "interpretation": "Concrete defect reported, reproduced, fixed and user-confirmed."
+    },
+    {
+      "question": "Q8",
+      "answer": "no puedo encontrar documentos aun",
+      "interpretation": "Task remains blocked; not acceptance of old 4/5 proposal."
+    },
+    {
+      "question": "Q9",
+      "answer": "no hay demoras, pero no sé que son los 341kb",
+      "interpretation": "Positive real performance observation; not final numeric acceptance."
+    },
+    {
+      "question": "Q10",
+      "answer": "ni idea que es esto",
+      "interpretation": "Not a score or a completed keyboard/contrast test."
+    },
+    {
+      "question": "Q4",
+      "answer": "no vi ninguno de esos mensajes de que falla o no tiene datos, pero sí muestra fechas",
+      "interpretation": "Dates confirmed; error and empty-state messages not observed in this latest report. Numeric score still pending."
+    },
+    {
+      "question": "Q8",
+      "answer": "Cambiar la nota y explicar qué ayuda falta",
+      "interpretation": "Requested override without a numeric score or explanatory note; clarification requested."
+    },
+    {
+      "question": "Q10",
+      "answer": "Anda bien la navegación con teclado",
+      "interpretation": "User confirms keyboard navigation works; revise draft to 4/5, pending numeric acceptance. Contrast and detailed focus review remain unverified."
+    }
+  ],
+  "pendingQuestions": [
+    "Q4",
+    "Q8",
+    "Q10"
+  ],
+  "keyboardObservation": {
+    "date": "2026-10-20",
+    "source": "user",
+    "answer": "Anda bien la navegación con teclado",
+    "scope": "General user report; no itemized key sequence or contrast audit claimed."
+  }
+}

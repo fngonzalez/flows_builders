@@ -1,0 +1,1300 @@
+{
+  "date": "2026-10-20",
+  "outputDir": "reviews/design-review/feedback-round-1",
+  "sourceScope": [
+    "src/App.tsx",
+    "src/components/ErrorBoundary.tsx",
+    "src/components/SeriesChart.tsx",
+    "src/domain/model.ts",
+    "src/main.tsx",
+    "src/services/AssetService.ts",
+    "src/state/WorkspaceContext.ts",
+    "src/state/WorkspaceProvider.tsx",
+    "src/styles.css",
+    "src/viewmodels/useInvestigationViewModel.ts",
+    "src/views/InvestigationView.tsx"
+  ],
+  "probes": {
+    "Q1_aura_imports": {
+      "count": 17,
+      "hits": [
+        {
+          "file": "src/App.tsx",
+          "line": 4,
+          "text": "import { Button } from '@cognite/aura/components/button';"
+        },
+        {
+          "file": "src/App.tsx",
+          "line": 10,
+          "text": "} from '@cognite/aura/components/card';"
+        },
+        {
+          "file": "src/App.tsx",
+          "line": 11,
+          "text": "import { Loader } from '@cognite/aura/components/loader';"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 1,
+          "text": "import { Button } from '@cognite/aura/components/button';"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 7,
+          "text": "} from '@cognite/aura/components/empty-state';"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 5,
+          "text": "} from '@cognite/aura/chart';"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 10,
+          "text": "} from '@cognite/aura/components/empty-state';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 1,
+          "text": "import { Alert, AlertDescription } from '@cognite/aura/components/alert';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 2,
+          "text": "import { Badge } from '@cognite/aura/components/badge';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 3,
+          "text": "import { Button } from '@cognite/aura/components/button';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 10,
+          "text": "} from '@cognite/aura/components/card';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 17,
+          "text": "} from '@cognite/aura/components/checkbox';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 23,
+          "text": "} from '@cognite/aura/components/command';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 30,
+          "text": "} from '@cognite/aura/components/dialog';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 36,
+          "text": "} from '@cognite/aura/components/empty-state';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 37,
+          "text": "import { Skeleton } from '@cognite/aura/components/skeleton';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 38,
+          "text": "import { DataGrid } from '@cognite/aura/data-grid';"
+        }
+      ]
+    },
+    "Q1_hex_colors": {
+      "count": 0,
+      "hits": []
+    },
+    "Q1_rgb_hsl": {
+      "count": 0,
+      "hits": []
+    },
+    "Q1_raw_dimensions": {
+      "count": 1,
+      "hits": [
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 592,
+          "text": "<div className=\"grid gap-6 lg:grid-cols-[minmax(0,280px)_minmax(0,1fr)]\">"
+        }
+      ]
+    },
+    "Q2_routes": {
+      "count": 0,
+      "hits": []
+    },
+    "Q2_breadcrumbs": {
+      "count": 0,
+      "hits": []
+    },
+    "Q2_navigation_primitives": {
+      "count": 0,
+      "hits": []
+    },
+    "Q2_chrome": {
+      "count": 1,
+      "hits": [
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 244,
+          "text": "<header className=\"border-b border-border\">"
+        }
+      ]
+    },
+    "Q2_titles_back": {
+      "count": 4,
+      "hits": [
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 290,
+          "text": "<h1 id=\"search-heading\" className=\"text-3xl font-semibold\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 538,
+          "text": "All investigations"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 545,
+          "text": "aria-label=\"Asset identity\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 555,
+          "text": "<h1 className=\"break-words text-3xl font-semibold\">"
+        }
+      ]
+    },
+    "Q3_vague_labels": {
+      "count": 0,
+      "hits": []
+    },
+    "Q3_inputs": {
+      "count": 1,
+      "hits": [
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 302,
+          "text": "<CommandInput"
+        }
+      ]
+    },
+    "Q3_labels": {
+      "count": 14,
+      "hits": [
+        {
+          "file": "src/App.tsx",
+          "line": 33,
+          "text": "{!failed && <Loader aria-label=\"Connecting\" />}"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 29,
+          "text": "aria-label={`${series.name} chart`}"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 59,
+          "text": "aria-label={`${series.name} over time in ${series.unit || 'unspecified units'}`}"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 75,
+          "text": "aria-label={`Loading ${name}`}"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 112,
+          "text": "aria-label={`Retry ${name}`}"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 284,
+          "text": "<section aria-label=\"Asset search\" className=\"space-y-4\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 303,
+          "text": "aria-label=\"Search assets\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 377,
+          "text": "<section className=\"space-y-3\" aria-label=\"Find connected assets\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 545,
+          "text": "aria-label=\"Asset identity\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 607,
+          "text": "<CheckboxItemLabel>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 624,
+          "text": "aria-label=\"Time range\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 652,
+          "text": "aria-label=\"Refresh chart\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 725,
+          "text": "aria-label=\"Related activities\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 762,
+          "text": "aria-label=\"Related documents\""
+        }
+      ]
+    },
+    "Q3_placeholders": {
+      "count": 1,
+      "hits": [
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 304,
+          "text": "placeholder=\"Search by equipment tag, name or description…\""
+        }
+      ]
+    },
+    "Q4_loading": {
+      "count": 6,
+      "hits": [
+        {
+          "file": "src/App.tsx",
+          "line": 33,
+          "text": "{!failed && <Loader aria-label=\"Connecting\" />}"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 78,
+          "text": "<Skeleton className=\"h-5 w-2/3\" />"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 79,
+          "text": "<Skeleton className=\"h-5 w-full\" />"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 80,
+          "text": "<Skeleton className=\"h-5 w-1/2\" />"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 128,
+          "text": "query: { isPending: boolean; error: unknown };"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 132,
+          "text": "return query.isPending ? ("
+        }
+      ]
+    },
+    "Q4_feedback": {
+      "count": 15,
+      "hits": [
+        {
+          "file": "src/state/WorkspaceContext.ts",
+          "line": 18,
+          "text": "actionError: boolean;"
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 24,
+          "text": "const [actionError, setActionError] = useState(false);"
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 47,
+          "text": "setActionError(false);"
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 105,
+          "text": "setActionError(false);"
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 107,
+          "text": "setActionError(true);"
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 125,
+          "text": "actionError,"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 96,
+          "text": "<Alert variant={status === 403 ? 'info' : 'error'}>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 97,
+          "text": "<AlertDescription>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 263,
+          "text": "<Alert>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 264,
+          "text": "<AlertDescription>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 436,
+          "text": "<Alert variant=\"info\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 437,
+          "text": "<AlertDescription>{vm.documentCheck.data}</AlertDescription>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 894,
+          "text": "{vm.actionError && ("
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 895,
+          "text": "<Alert>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 896,
+          "text": "<AlertDescription>"
+        }
+      ]
+    },
+    "Q4_mutations": {
+      "count": 0,
+      "hits": []
+    },
+    "Q4_boundaries": {
+      "count": 11,
+      "hits": [
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 11,
+          "text": "export class ErrorBoundary extends Component<"
+        },
+        {
+          "file": "src/main.tsx",
+          "line": 7,
+          "text": "import { ErrorBoundary } from './components/ErrorBoundary';"
+        },
+        {
+          "file": "src/main.tsx",
+          "line": 26,
+          "text": "<ErrorBoundary onRecover={reloadPreservingRoute}>"
+        },
+        {
+          "file": "src/main.tsx",
+          "line": 28,
+          "text": "</ErrorBoundary>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 53,
+          "text": "import { ErrorBoundary } from '../components/ErrorBoundary';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 581,
+          "text": "<ErrorBoundary key={`series-${identity}`}>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 698,
+          "text": "</ErrorBoundary>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 717,
+          "text": "<ErrorBoundary key={`activity-${identity}`}>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 739,
+          "text": "</ErrorBoundary>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 754,
+          "text": "<ErrorBoundary key={`files-${identity}`}>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 776,
+          "text": "</ErrorBoundary>"
+        }
+      ]
+    },
+    "Q5_role_button": {
+      "count": 0,
+      "hits": []
+    },
+    "Q5_hover_focus": {
+      "count": 0,
+      "hits": []
+    },
+    "Q5_pointer": {
+      "count": 0,
+      "hits": []
+    },
+    "Q6_destructive_verbs": {
+      "count": 5,
+      "hits": [
+        {
+          "file": "src/state/WorkspaceContext.ts",
+          "line": 22,
+          "text": "clearRecent: () => void;"
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 93,
+          "text": "const clearRecent = useCallback("
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 121,
+          "text": "clearRecent,"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 459,
+          "text": "<Button size=\"sm\" variant=\"ghost\" onClick={vm.clearRecent}>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 460,
+          "text": "Clear history"
+        }
+      ]
+    },
+    "Q6_confirmations": {
+      "count": 0,
+      "hits": []
+    },
+    "Q6_destructive_style": {
+      "count": 0,
+      "hits": []
+    },
+    "Q7_responsive": {
+      "count": 4,
+      "hits": [
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 261,
+          "text": "<main className=\"mx-auto max-w-7xl space-y-6 px-4 py-6 sm:px-6\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 465,
+          "text": "<div className=\"grid gap-3 sm:grid-cols-2 lg:grid-cols-3\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 496,
+          "text": "<div className=\"grid gap-4 md:grid-cols-3\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 592,
+          "text": "<div className=\"grid gap-6 lg:grid-cols-[minmax(0,280px)_minmax(0,1fr)]\">"
+        }
+      ]
+    },
+    "Q7_horizontal_scroll": {
+      "count": 0,
+      "hits": []
+    },
+    "Q7_fixed_pixel_sizing": {
+      "count": 0,
+      "hits": []
+    },
+    "Q8_empty_copy": {
+      "count": 52,
+      "hits": [
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 3,
+          "text": "EmptyState,"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 4,
+          "text": "EmptyStateActions,"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 5,
+          "text": "EmptyStateDescription,"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 6,
+          "text": "EmptyStateTitle,"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 7,
+          "text": "} from '@cognite/aura/components/empty-state';"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 22,
+          "text": "<EmptyState>"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 23,
+          "text": "<EmptyStateTitle>Something went wrong</EmptyStateTitle>"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 24,
+          "text": "<EmptyStateDescription>"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 26,
+          "text": "</EmptyStateDescription>"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 27,
+          "text": "<EmptyStateActions>"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 36,
+          "text": "</EmptyStateActions>"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 37,
+          "text": "</EmptyState>"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 7,
+          "text": "EmptyState,"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 8,
+          "text": "EmptyStateDescription,"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 9,
+          "text": "EmptyStateTitle,"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 10,
+          "text": "} from '@cognite/aura/components/empty-state';"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 44,
+          "text": "<EmptyState>"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 45,
+          "text": "<EmptyStateTitle as=\"h4\">No datapoints available</EmptyStateTitle>"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 46,
+          "text": "<EmptyStateDescription>"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 48,
+          "text": "</EmptyStateDescription>"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 49,
+          "text": "</EmptyState>"
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 94,
+          "text": "// Empty relation arrays can satisfy exists. Prefer uploaded documents, but"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 32,
+          "text": "EmptyState,"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 33,
+          "text": "EmptyStateDescription,"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 34,
+          "text": "EmptyStateIcon,"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 35,
+          "text": "EmptyStateTitle,"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 36,
+          "text": "} from '@cognite/aura/components/empty-state';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 140,
+          "text": "function Empty({ title, children }: { title: string; children: ReactNode }) {"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 142,
+          "text": "<EmptyState>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 143,
+          "text": "<EmptyStateTitle as=\"h3\">{title}</EmptyStateTitle>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 144,
+          "text": "<EmptyStateDescription>{children}</EmptyStateDescription>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 145,
+          "text": "</EmptyState>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 488,
+          "text": "<Empty title=\"Your investigations start here\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 491,
+          "text": "</Empty>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 588,
+          "text": "<Empty title=\"No linked time series\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 590,
+          "text": "</Empty>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 665,
+          "text": "<EmptyState>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 666,
+          "text": "<EmptyStateIcon>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 668,
+          "text": "</EmptyStateIcon>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 669,
+          "text": "<EmptyStateTitle as=\"h3\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 671,
+          "text": "</EmptyStateTitle>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 672,
+          "text": "<EmptyStateDescription>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 675,
+          "text": "</EmptyStateDescription>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 676,
+          "text": "</EmptyState>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 733,
+          "text": "<Empty title=\"No linked activities\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 736,
+          "text": "</Empty>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 770,
+          "text": "<Empty title=\"No linked documents\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 773,
+          "text": "</Empty>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 838,
+          "text": "<Empty title=\"Content not uploaded\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 841,
+          "text": "</Empty>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 866,
+          "text": "<Empty title=\"Open this document externally\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 869,
+          "text": "</Empty>"
+        }
+      ]
+    },
+    "Q8_empty_component": {
+      "count": 14,
+      "hits": [
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 22,
+          "text": "<EmptyState>"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 23,
+          "text": "<EmptyStateTitle>Something went wrong</EmptyStateTitle>"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 24,
+          "text": "<EmptyStateDescription>"
+        },
+        {
+          "file": "src/components/ErrorBoundary.tsx",
+          "line": 27,
+          "text": "<EmptyStateActions>"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 44,
+          "text": "<EmptyState>"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 45,
+          "text": "<EmptyStateTitle as=\"h4\">No datapoints available</EmptyStateTitle>"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 46,
+          "text": "<EmptyStateDescription>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 142,
+          "text": "<EmptyState>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 143,
+          "text": "<EmptyStateTitle as=\"h3\">{title}</EmptyStateTitle>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 144,
+          "text": "<EmptyStateDescription>{children}</EmptyStateDescription>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 665,
+          "text": "<EmptyState>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 666,
+          "text": "<EmptyStateIcon>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 669,
+          "text": "<EmptyStateTitle as=\"h3\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 672,
+          "text": "<EmptyStateDescription>"
+        }
+      ]
+    },
+    "Q8_length_branches": {
+      "count": 11,
+      "hits": [
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 50,
+          "text": ") : !points.length ? ("
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 85,
+          "text": "return result.items.length"
+        },
+        {
+          "file": "src/viewmodels/useInvestigationViewModel.ts",
+          "line": 56,
+          "text": "enabled: documentSuggestions.data?.length === 0,"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 332,
+          "text": "search.data?.length === 0 && ("
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 411,
+          "text": "(query.data.length ? ("
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 573,
+          "text": "{series.data && <Badge>{series.data.length}</Badge>}"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 587,
+          "text": "{!series.data?.length ? ("
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 708,
+          "text": "<Badge>{activities.data.length}</Badge>"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 723,
+          "text": "{activities.data?.length ? ("
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 747,
+          "text": "{files.data && <Badge>{files.data.length}</Badge>}"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 760,
+          "text": "{files.data?.length ? ("
+        }
+      ]
+    },
+    "Q9_lazy": {
+      "count": 1,
+      "hits": [
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 65,
+          "text": "const SeriesChart = lazy(() =>"
+        }
+      ]
+    },
+    "Q9_memo": {
+      "count": 11,
+      "hits": [
+        {
+          "file": "src/App.tsx",
+          "line": 13,
+          "text": "import { useEffect, useMemo, useState } from 'react';"
+        },
+        {
+          "file": "src/App.tsx",
+          "line": 58,
+          "text": "const dependencies = useMemo("
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 2,
+          "text": "import { useCallback, useRef, useState } from 'react';"
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 33,
+          "text": "const sync = useCallback("
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 45,
+          "text": "const update = useCallback("
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 55,
+          "text": "const openAsset = useCallback("
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 66,
+          "text": "const persistRecent = useCallback("
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 82,
+          "text": "const remember = useCallback("
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 93,
+          "text": "const clearRecent = useCallback("
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 97,
+          "text": "const retrySync = useCallback("
+        },
+        {
+          "file": "src/state/WorkspaceProvider.tsx",
+          "line": 101,
+          "text": "const openExternal = useCallback("
+        }
+      ]
+    },
+    "Q9_virtual": {
+      "count": 3,
+      "hits": [
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 38,
+          "text": "import { DataGrid } from '@cognite/aura/data-grid';"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 724,
+          "text": "<DataGrid"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 761,
+          "text": "<DataGrid"
+        }
+      ]
+    },
+    "Q9_list_calls": {
+      "count": 4,
+      "hits": [
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 80,
+          "text": "const result = await this.client.instances.list({"
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 105,
+          "text": "const response = await this.client.instances.list({"
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 172,
+          "text": "this.client.instances.list({"
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 253,
+          "text": "const response = await this.client.instances.list({"
+        }
+      ]
+    },
+    "Q9_limits": {
+      "count": 6,
+      "hits": [
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 83,
+          "text": "limit: 1,"
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 128,
+          "text": "limit: kind === 'signals' ? 25 : 100,"
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 170,
+          "text": "limit: 30,"
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 176,
+          "text": "limit: 30,"
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 262,
+          "text": "limit: 1000,"
+        },
+        {
+          "file": "src/services/AssetService.ts",
+          "line": 372,
+          "text": "limit: 1000,"
+        }
+      ]
+    },
+    "Q10_aria": {
+      "count": 13,
+      "hits": [
+        {
+          "file": "src/App.tsx",
+          "line": 33,
+          "text": "{!failed && <Loader aria-label=\"Connecting\" />}"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 29,
+          "text": "aria-label={`${series.name} chart`}"
+        },
+        {
+          "file": "src/components/SeriesChart.tsx",
+          "line": 59,
+          "text": "aria-label={`${series.name} over time in ${series.unit || 'unspecified units'}`}"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 75,
+          "text": "aria-label={`Loading ${name}`}"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 112,
+          "text": "aria-label={`Retry ${name}`}"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 284,
+          "text": "<section aria-label=\"Asset search\" className=\"space-y-4\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 303,
+          "text": "aria-label=\"Search assets\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 377,
+          "text": "<section className=\"space-y-3\" aria-label=\"Find connected assets\">"
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 545,
+          "text": "aria-label=\"Asset identity\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 624,
+          "text": "aria-label=\"Time range\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 652,
+          "text": "aria-label=\"Refresh chart\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 725,
+          "text": "aria-label=\"Related activities\""
+        },
+        {
+          "file": "src/views/InvestigationView.tsx",
+          "line": 762,
+          "text": "aria-label=\"Related documents\""
+        }
+      ]
+    },
+    "Q10_focus": {
+      "count": 0,
+      "hits": []
+    },
+    "Q10_removed_tab_order": {
+      "count": 0,
+      "hits": []
+    }
+  },
+  "jsx": {
+    "images": [
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 859
+      }
+    ],
+    "missingAlt": [],
+    "iframes": [
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 853
+      }
+    ],
+    "missingTitle": [],
+    "nativeButtons": [],
+    "auraButtons": [
+      {
+        "file": "src/App.tsx",
+        "line": 44
+      },
+      {
+        "file": "src/components/ErrorBoundary.tsx",
+        "line": 28
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 106
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 170
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 203
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 266
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 393
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 414
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 459
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 469
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 530
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 628
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 649
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 872
+      },
+      {
+        "file": "src/views/InvestigationView.tsx",
+        "line": 881
+      }
+    ],
+    "emptyButtons": [],
+    "nonSemanticClicks": [],
+    "negativeTabOrder": [],
+    "nameProbeNote": "Recurses into nested JSX spans so the two truncated action labels remain correctly recognized as named buttons."
+  },
+  "dmsLists": [
+    {
+      "file": "src/services/AssetService.ts",
+      "line": 80,
+      "hasLimit": true
+    },
+    {
+      "file": "src/services/AssetService.ts",
+      "line": 105,
+      "hasLimit": true
+    },
+    {
+      "file": "src/services/AssetService.ts",
+      "line": 172,
+      "hasLimit": true
+    },
+    {
+      "file": "src/services/AssetService.ts",
+      "line": 253,
+      "hasLimit": true
+    }
+  ],
+  "auraVersion": "0.3.5",
+  "viewportMeta": true,
+  "assets": [
+    {
+      "file": "dist/assets/index-BXJhkHUs.js",
+      "bytes": 679234,
+      "gzipBytes": 215101
+    },
+    {
+      "file": "dist/assets/index-DJ_uovgY.css",
+      "bytes": 147304,
+      "gzipBytes": 23763
+    },
+    {
+      "file": "dist/assets/SeriesChart-CEfYsaED.js",
+      "bytes": 338497,
+      "gzipBytes": 101929
+    }
+  ],
+  "totalGzipBytes": 340793,
+  "optionalTools": {
+    "jsxA11y": false,
+    "axeCore": false
+  },
+  "browser": {
+    "apps": 0,
+    "browsers": 0,
+    "evidence": "cua.getState() returned empty inventories in this review",
+    "note": "No connected Fusion browser; separate isolated headless Edge layout regression recorded with the code review."
+  },
+  "productionSourceSha256": "9b59bf7ac114c43bbfde50cfd1ee3cdd09be8aff09e7b2091748bd0624747e83",
+  "layoutRegression": "../../code-review/feedback-round-4/layout-regression.json"
+}

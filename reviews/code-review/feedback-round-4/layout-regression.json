@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-20",
+  "scope": "Isolated headless Edge test page using real React/Aura InvestigationView and test-only injected service; no authenticated Fusion session",
+  "before": {
+    "width": 1256,
+    "height": 708,
+    "cellWidth": 150,
+    "buttonWidth": 801.8125,
+    "nameInvadesNextColumn": true,
+    "documentOverflows": false,
+    "tableScrollHeight": 13284,
+    "renderedRows": 368,
+    "fullActivityNameAvailable": true
+  },
+  "after": [
+    {
+      "requestedWindowWidth": 1024,
+      "width": 1000,
+      "height": 708,
+      "cellWidth": 150,
+      "buttonWidth": 122,
+      "nameInvadesNextColumn": false,
+      "documentOverflows": false,
+      "tableScrollHeight": 384,
+      "renderedRows": 21,
+      "fullActivityNameAvailable": true
+    },
+    {
+      "requestedWindowWidth": 1280,
+      "width": 1256,
+      "height": 708,
+      "cellWidth": 150,
+      "buttonWidth": 122,
+      "nameInvadesNextColumn": false,
+      "documentOverflows": false,
+      "tableScrollHeight": 384,
+      "renderedRows": 21,
+      "fullActivityNameAvailable": true
+    },
+    {
+      "requestedWindowWidth": 1440,
+      "width": 1416,
+      "height": 708,
+      "cellWidth": 150,
+      "buttonWidth": 122,
+      "nameInvadesNextColumn": false,
+      "documentOverflows": false,
+      "tableScrollHeight": 384,
+      "renderedRows": 21,
+      "fullActivityNameAvailable": true
+    }
+  ],
+  "assertions": [
+    "Activity action stays within its cell",
+    "No page horizontal overflow",
+    "Activity grid height at most 500px",
+    "Full activity name remains accessible"
+  ],
+  "beforeResult": "FAIL: activity name overlaps next column; grid height 13284px",
+  "afterResult": "PASS at all three widths",
+  "userAcceptance": {
+    "asset": "valhall-assets / WMT:23-KA-9101-M01",
+    "activities": 368,
+    "question": "En la notebook, recargá Asset 360 y volvé a Work orders & activities. ¿Ahora las columnas se leen separadas, sin texto superpuesto?",
+    "answer": "Sí, ahora se lee bien"
+  },
+  "limits": "DOM geometry and user acceptance, not a screenshot or WCAG audit. White headless screenshots were discarded as unusable visual evidence. Actual PDF opening remains unverified."
+}
